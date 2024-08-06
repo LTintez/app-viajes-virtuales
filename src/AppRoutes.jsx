@@ -17,7 +17,6 @@ function AppRoutes() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/comments" element={<Comments />} />
 
-
       </Routes>
       <Footer />
     </>
