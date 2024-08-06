@@ -2,6 +2,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import Destinations from './pages/Destinations';
+import Comments from './pages/Comments';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -12,6 +14,10 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/comments" element={<Comments />} />
+
+
       </Routes>
       <Footer />
     </>
