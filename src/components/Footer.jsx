@@ -1,15 +1,17 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaGithub, FaPlane, FaMap } from 'react-icons/fa';
 import './Footer.css';  // Importa el archivo CSS aquí
 
 const sections = [
   {
     title: 'Viajes',
-    items: ['Aventura', 'Playa', 'Montaña', 'Ciudades', 'Cruceros']
+    items: ['Aventura', 'Playa', 'Montaña', 'Ciudades', 'Cruceros'],
+    icon: FaPlane
   },
   {
     title: 'Destinos',
-    items: ['Europa', 'América', 'Asia', 'África', 'Oceanía']
+    items: ['Europa', 'América', 'Asia', 'África', 'Oceanía'],
+    icon: FaMap
   }
 ];
 
@@ -40,23 +42,18 @@ const Footer = () => {
   return (
     <footer className="w-full mt-24 bg-[#071952] text-[#EBF4F6] py-8 px-4">
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-12 gap-8 border-b-2 border-[#088395] py-8">
-        <div className="col-span-1 md:col-span-3">
-          <h6 className="font-bold uppercase pt-2">VIAJES</h6>
-          <ul>
-            {['Aventura', 'Playa', 'Montaña', 'Ciudades', 'Cruceros'].map((item, i) => (
-              <li key={i} className="py-1 hover:text-white cursor-pointer">{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="col-span-1 md:col-span-3">
-          <h6 className="font-bold uppercase pt-2">DESTINOS</h6>
-          <ul>
-            {['Europa', 'América', 'Asia', 'África', 'Oceanía'].map((item, i) => (
-              <li key={i} className="py-1 hover:text-white cursor-pointer">{item}</li>
-            ))}
-          </ul>
-        </div>
+        {sections.map((section, index) => (
+          <div key={index} className="col-span-1 md:col-span-3">
+            <h6 className="font-bold uppercase pt-2 flex items-center">
+              <section.icon className="mr-2 text-[#EBF4F6]" /> {section.title}
+            </h6>
+            <ul>
+              {section.items.map((item, i) => (
+                <li key={i} className="py-1 hover:text-white cursor-pointer">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
 
         <div className="col-span-2 md:col-span-6">
           <h6 className="font-bold uppercase pt-2">¡SUSCRIBITE A NUESTRO NEWSLETTER!</h6>
