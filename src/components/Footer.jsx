@@ -61,7 +61,11 @@ const Footer = () => {
             Las últimas actualizaciones, destinos, recursos y mucho más se enviará a tu casilla de mail.
           </p>
           <form className="flex flex-col sm:flex-row">
-            <input type="email" className="w-full p-2 mr-0 sm:mr-4 rounded-md mb-4" placeholder="Ingresa tu dirección de email" />
+            <input
+              type="email"
+              className="w-full p-2 mr-0 sm:mr-4 rounded-md mb-4 bg-[#EBF4F6] text-[#000] border border-[#ccc] focus:border-[#37B7C3]"
+              placeholder="Ingresa tu dirección de email"
+            />
             <button className="p-2 mb-4 bg-[#37B7C3] text-[#EBF4F6] rounded-md hover:bg-[#088395] hover:text-[#EBF4F6] transition duration-300">
               Suscribirse
             </button>
