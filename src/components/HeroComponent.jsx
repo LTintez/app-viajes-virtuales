@@ -6,7 +6,7 @@ const HeroComponent = () => {
   return (
     <div className="relative w-full h-screen">
       <video className="absolute w-full h-full object-cover" autoPlay muted loop>
-        <source src="/assets/background-hero3.mp4" type="video/mp4" />
+        <source src="/assets/background-hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="relative z-10 flex flex-col justify-center items-start h-full px-6 md:px-12 lg:px-24 text-[#EBF4F6]">
