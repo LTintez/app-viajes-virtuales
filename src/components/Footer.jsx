@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaGithub, FaPlane, FaMap } from 'react-icons/fa';
-import './Footer.css';  // Importa el archivo CSS aquí
+import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaPlane, FaMap } from 'react-icons/fa';
+import './Footer.css';
 
 const sections = [
   {
