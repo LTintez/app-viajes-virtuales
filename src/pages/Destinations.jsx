@@ -1,8 +1,10 @@
-import React from 'react'
+import cities from '../data/cities'
+import CityList from '../components/CityList'
+
 
 const Destinations = () => {
   return (
-    <div>Destinations</div>
+    <CityList city={cities} />
   )
 }
 
