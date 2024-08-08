@@ -23,7 +23,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/"
-                                className="hover:text-[#939185] transition-colors duration-300 flex items-center"
+                                className="hover:text-[#37B7C3] transition-colors duration-300 flex items-center"
                             >
                                 <FaHome className="mr-1" /> Inicio
                             </Link>
@@ -31,7 +31,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/destinations"
-                                className="hover:text-[#939185] transition-colors duration-300 flex items-center"
+                                className="hover:text-[#37B7C3] transition-colors duration-300 flex items-center"
                             >
                                 <FaPlane className="mr-1" /> Destinos
                             </Link>
@@ -39,7 +39,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/about"
-                                className="hover:text-[#939185] transition-colors duration-300 flex items-center"
+                                className="hover:text-[#37B7C3] transition-colors duration-300 flex items-center"
                             >
                                 <FaInfoCircle className="mr-1" /> Acerca de
                             </Link>

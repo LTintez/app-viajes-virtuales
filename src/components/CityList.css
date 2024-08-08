@@ -7,7 +7,6 @@
     letter-spacing: 2px;
     margin: 2rem 0;
     padding: 1rem;
-    background: linear-gradient(to right, #f0f0f0, #ffffff, #f0f0f0);
     border-bottom: 3px solid #071952;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
