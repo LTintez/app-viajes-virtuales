@@ -1,4 +1,4 @@
-const cities = [
+[
     {
         "id": 1,
         "titulo": "New York",
@@ -59,6 +59,4 @@ const cities = [
         "descripcion": "Principal destino turístico de Jamaica, conocido por sus playas de arena blanca, resorts todo incluido y su vibrante cultura caribeña.",
         "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Montego_bay-1001.jpg"
     }
-  ]
-
-export default cities
+]

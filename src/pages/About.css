@@ -43,6 +43,10 @@ body {
   height: auto;
 }
 
+.app-info img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
 .team-members {
   display: flex;
   justify-content: center;
