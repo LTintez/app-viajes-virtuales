@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaPlane, FaInfoCircle, FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
-
+ 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+ 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+ 
     return (
         <header className="bg-[#071952] text-white shadow-md">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -89,5 +89,5 @@ const Header = () => {
         </header>
     );
 };
-
+ 
 export default Header;
