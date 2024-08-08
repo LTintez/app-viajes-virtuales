@@ -8,7 +8,7 @@ const CityList = ({city}) => {
   console.log(city)
   return (
     <article>
-      <h2 className="main-title">Destinos</h2>
+      <h2 className="main-title" >Destinos</h2>
       <div className="card-container">
           {city.map(cityItem => (
               <CityItem key={cityItem.id} {...cityItem} />
