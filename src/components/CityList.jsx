@@ -1,25 +1,28 @@
-import './CityList.css'
-import React from 'react'
-import PropTypes from 'prop-types'
-import CityItem from './CityItem'
+import './CityList.css';
+import './SearchBar.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import CityItem from './CityItem';
 
-
-const CityList = ({city}) => {
-  console.log(city)
+const CityList = ({ filteredCities }) => {
   return (
     <article>
-      <h2 className="main-title" >Destinos</h2>
+      <h2 className="main-title">Destinos</h2>
       <div className="card-container">
-          {city.map(cityItem => (
-              <CityItem key={cityItem.id} {...cityItem} />
-          ))}
+        {filteredCities.length > 0 ? (
+          filteredCities.map((city) => (
+            <CityItem key={city.id} {...city} />
+          ))
+        ) : (
+          <p className="no-results">No se encontraron resultados.</p>
+        )}
       </div>
     </article>
-  )
-}
+  );
+};
 
 CityList.propTypes = {
-  city: PropTypes.arrayOf(PropTypes.object).isRequired
-}
+  filteredCities: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
-export default CityList
+export default CityList;
