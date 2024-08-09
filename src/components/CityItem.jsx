@@ -1,7 +1,8 @@
 import './CityItem.css'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
-const CityItem = ({ titulo, descripcion, imagen }) => {
+const CityItem = ({ id, titulo, descripcion, imagen }) => {
     return (
         <section className="card-section">
             <h2 className="card-title">{titulo}</h2>
@@ -9,12 +10,17 @@ const CityItem = ({ titulo, descripcion, imagen }) => {
             <picture>
                 <img className="card-img" src={imagen} alt={titulo} />
             </picture>
-            <button className="ver-mas-btn">Ver más</button>
+            <Link to={`/details/${id}`}>
+                <button className="ver-mas-btn">
+                    Ver más
+                </button>
+            </Link>
         </section>
     )
 }
 
 CityItem.propTypes = {
+    id: PropTypes.number.isRequired,
     titulo: PropTypes.string,
     descripcion: PropTypes.string,
     imagen: PropTypes.string
