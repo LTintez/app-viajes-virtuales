@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import citiesData from '../data/cities.json';
 import { FaArrowLeft } from 'react-icons/fa';
 import CommentList from './CommentList';
+import CommentForm from './CommentForm';
 
 const CityDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const city = citiesData.find(city => city.id === parseInt(id));
+    const [comments, setComments] = useState(JSON.parse(localStorage.getItem('comments')) || []);
 
     if (!city) {
         return <div className="p-4 text-red-500">No city found</div>;
     }
+
+    const handleNewComment = (newComment) => {
+        setComments([...comments, newComment]);
+    };
 
     return (
         <div className="p-4 bg-[#FFFFFF] flex flex-col gap-4">
@@ -25,7 +31,9 @@ const CityDetails = () => {
                     <img src={city.imagen} alt={city.titulo} className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto lg:max-w-full lg:mx-0" />
                 </div>
             </div>
-            <CommentList />
+            {/* Seccion de comentarios */}
+            <CommentList comments={comments} />
+            <CommentForm onNewComment={handleNewComment} />
             <button
                 onClick={() => navigate('/destinations')}
                 className="self-start mt-4 p-2 flex items-center gap-2 bg-blue-600 text-white rounded hover:bg-blue-700"
