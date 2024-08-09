@@ -16,6 +16,7 @@ export default {
         focus: '#088395',
         lightBackground: '#EBF4F6',
       },
+
     },
   },
   plugins: [],

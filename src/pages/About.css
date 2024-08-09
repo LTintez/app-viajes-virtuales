@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(to right,#EBF4F6, #37B7C3); 
+  background: linear-gradient(to right,#EBF4F6, #37B7C3);
+  --dark: linear-gradient(to right,#1a202c, #2d3748)
+
 }
 
 .about-page {

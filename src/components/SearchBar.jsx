@@ -15,7 +15,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Buscar destino..."
         value={searchTerm}
         onChange={handleInputChange}
-        className="w-1/3 p-2 text-black bg-lightBackground border-2 border-primary rounded-full focus:outline-none focus:border-focus text-lg font-inter"
+        className="w-1/3 p-2 text-black bg-lightBackground dark:#666 border-2 border-primary rounded-full focus:outline-none focus:border-focus text-lg font-inter"
       />
     </div>
   );

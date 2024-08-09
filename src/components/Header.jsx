@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaHome, FaPlane, FaInfoCircle, FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
 import DarkModeContext from '../contexts/DarkModeContext';
 
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [dark, setDark] = React.useState(false);
+
+    const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     const toggleMenu = () => {
@@ -12,7 +19,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`${darkMode ? 'bg-gray-800' : 'bg-[#071952]'} text-white shadow-md transition-colors duration-300`}>
+        <header className={'bg-[#071952] dark:bg-blue-900 text-white shadow-md transition-colors duration-300'}>
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold ml-7">
                     <Link to="/" className="hover:text-[#37B7C3] transition-colors duration-300">
@@ -46,20 +53,19 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <button
-                        onClick={toggleDarkMode}
-                        className="ml-4 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300"
-                    >
-                        {darkMode ? <FaSun /> : <FaMoon />}
-                    </button>
+                    <div>
+                        <button onClick={()=> darkModeHandler()}>
+                            {
+                                
+                                dark && <FaSun />
+                            }
+                            {
+                                !dark && <FaMoon />
+                            }
+                        </button>
+                    </div>
                 </nav>
                 <div className="md:hidden flex items-center">
-                    <button
-                        onClick={toggleDarkMode}
-                        className="mr-4 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300"
-                    >
-                        {darkMode ? <FaSun /> : <FaMoon />}
-                    </button>
                     <button
                         className="text-2xl"
                         onClick={toggleMenu}
