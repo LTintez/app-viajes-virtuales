@@ -5,7 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 
 const CityDetails = () => {
     const { id } = useParams();
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const city = citiesData.find(city => city.id === parseInt(id));
 
     if (!city) {
@@ -14,13 +14,14 @@ const CityDetails = () => {
 
     return (
         <div className="p-4 bg-[#FFFFFF] flex flex-col gap-4">
-            <div className="flex gap-4">
-                <div className="flex-1">
-                    <h3 className="text-3xl font-bold text-[#071952] mb-2">{city.titulo}</h3>
-                    <p className="text-lg">{city.descripcion}</p>
+            <div className="flex flex-col lg:flex-row gap-4">
+                <div className="flex-1 lg:w-2/3">
+                    <h3 className="text-3xl font-bold text-[#071952] mb-4">{city.titulo}</h3>
+                    <p className="text-lg text-[#088395] mb-4">{city.descripcion}</p>
+                    <p className="text-md mb-6">{city.details}</p>
                 </div>
-                <div className="flex-none w-1/3">
-                    {/* Aca se va a insertar la imagen */}
+                <div className="flex-none lg:w-1/3">
+                    <img src={city.imagen} alt={city.titulo} className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto lg:max-w-full lg:mx-0" />
                 </div>
             </div>
             <button
