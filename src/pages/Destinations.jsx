@@ -23,11 +23,13 @@ const Destinations = () => {
   };
 
   return (
-    <div>
-      <h1 className="main-title">Destinos</h1>
-      <SearchBar onSearch={handleSearch} />
-      <CityList filteredCities={filteredCities} />
-    </div>
+    <body className='bg-gradient-to-r from-[#EBF4F6] to-[#37B7C3] dark:from-[#1d5963] dark:to-[#2d3748]'>
+      <div>
+        <h1 className="text-5xl text-center my-8 py-4 border-b-4 font-bold text-[#071952] dark:text-[#36C2CE] border-[#071952] dark:border-[#36C2CE]">Destinos</h1>
+        <SearchBar onSearch={handleSearch} />
+        <CityList filteredCities={filteredCities} />
+      </div>
+    </body>
   );
 };
 

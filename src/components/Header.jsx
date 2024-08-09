@@ -1,8 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaPlane, FaInfoCircle, FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
-import DarkModeContext from '../contexts/DarkModeContext';
-
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +10,13 @@ const Header = () => {
         setDark(!dark);
         document.body.classList.toggle("dark");
     }
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <header className={'bg-[#071952] dark:bg-blue-900 text-white shadow-md transition-colors duration-300'}>
+        <header className={'bg-blue-900 dark:bg-[#071952] text-white shadow-md transition-colors duration-300'}>
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold ml-7">
                     <Link to="/" className="hover:text-[#37B7C3] transition-colors duration-300">

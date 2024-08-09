@@ -4,8 +4,8 @@ import './FeaturedSection.css';
 
 const FeaturedSection = () => {
     return (
-        <section className="featured-section py-12 bg-background">
-            <h2 className="text-4xl font-bold text-center mb-10 text-title">
+        <section className="featured-section py-12 bg-background dark:bg-[#071952]">
+            <h2 className="text-4xl font-bold text-center mb-10 text-title dark:text-[#b6f4ff]">
                 En TripTastic encontrarás:
             </h2>
             <div className="cards-container flex flex-wrap justify-center gap-3">

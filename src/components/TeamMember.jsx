@@ -5,9 +5,9 @@ const TeamMember = ({ name, role, descripcion, image, linkedinUrl, githubUrl }) 
     return (
       <div className="team-member">
         <img src={image} alt={name} />
-        <h2>{name}</h2>
-        <h3>{role}</h3>
-        <p>{descripcion}</p>
+        <h2 className='dark:text-[#b6f4ff]'>{name}</h2>
+        <h3 className='dark:text-[#b6f4ff]'>{role}</h3>
+        <p className='text-[#071952} dark:text-[#EBF4F6]'>{descripcion}</p>
         <div className="social-links">
           <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="linkedin-icon" />

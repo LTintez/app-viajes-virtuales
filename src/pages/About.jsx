@@ -23,35 +23,37 @@ const About = () => {
   ]);
 
   return (
-    <div className="about-page">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#071952] mb-4">Acerca de TripTastic</h1>
-      <div className="app-info">
-        <p className="text-lg text-[#071952]">
-          <strong>¡Bienvenido a TripTastic!</strong> <br />
-          Somos la nueva aplicación web que transforma la exploración
-          de destinos turísticos en una experiencia virtual única. Nuestro propósito es ofrecerte
-          una inmersión total y emocionante, permitiéndote descubrir y disfrutar de diferentes
-          lugares del mundo desde la comodidad de tu hogar. <br />
-          <strong>¡Prepárate para una fantastica aventura sin moverte de tu casa!</strong>
-        </p>
-        <img src="assets\computadora.png" alt="computadora con imagenes de viajes" />
-      </div>
+    <body className='bg-gradient-to-r from-[#EBF4F6] to-[#37B7C3] dark:from-[#1d5963] dark:to-[#2d3748]'>
+      <div className="about-page">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#071952] mb-4 dark:text-[#36C2CE]">Acerca de TripTastic</h1>
+        <div className="app-info">
+          <p className="text-lg text-[#071952] dark:text-[#36C2CE]">
+            <strong>¡Bienvenido a TripTastic!</strong> <br />
+            Somos la nueva aplicación web que transforma la exploración
+            de destinos turísticos en una experiencia virtual única. Nuestro propósito es ofrecerte
+            una inmersión total y emocionante, permitiéndote descubrir y disfrutar de diferentes
+            lugares del mundo desde la comodidad de tu hogar. <br />
+            <strong>¡Prepárate para una fantastica aventura sin moverte de tu casa!</strong>
+          </p>
+          <img src="assets\computadora.png" alt="computadora con imagenes de viajes" />
+        </div>
 
-      <h2 className="text-4xl md:text-5xl font-bold text-[#071952] mb-4">Nuestro Equipo de Desarrollo</h2>
-      <div className="team-members">
-        {teamMembers.map((member, index) => (
-          <TeamMember
-            key={index}
-            name={member.name}
-            role={member.role}
-            descripcion={member.descripcion}
-            image={member.image}
-            linkedinUrl={member.linkedinUrl}
-            githubUrl={member.githubUrl}
-          />
-        ))}
+        <h2 className="text-4xl md:text-5xl font-bold text-[#071952] dark:text-[#36C2CE] mb-4">Nuestro Equipo de Desarrollo</h2>
+        <div className="team-members">
+          {teamMembers.map((member, index) => (
+            <TeamMember
+              key={index}
+              name={member.name}
+              role={member.role}
+              descripcion={member.descripcion}
+              image={member.image}
+              linkedinUrl={member.linkedinUrl}
+              githubUrl={member.githubUrl}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </body>
   );
 };
 
