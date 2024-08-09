@@ -23,16 +23,16 @@ const CityDetails = () => {
         <div className="p-4 flex flex-col gap-4 bg-gradient-to-r from-[#EBF4F6] to-[#37B7C3] dark:from-[#1d5963] dark:to-[#2d3748]">
             <div className="flex flex-col lg:flex-row gap-4">
                 <div className="flex-1 lg:w-2/3">
-                    <h3 className="text-3xl font-bold text-[#071952] mb-4">{city.titulo}</h3>
-                    <p className="text-lg text-[#088395] mb-4">{city.descripcion}</p>
-                    <p className="text-md mb-6">{city.details}</p>
+                    <h3 className="text-3xl font-bold text-[#071952] dark:text-[#36C2CE] mb-4">{city.titulo}</h3>
+                    <p className="text-lg text-[#088395] dark:text-[#36C2CE] mb-4">{city.descripcion}</p>
+                    <p className="text-md dark:text-[#b6f4ff] mb-6">{city.details}</p>
                     {/* Renderización de puntos de interés */}
                     {city.puntosDeInteres && city.puntosDeInteres.length > 0 ? (
                         <div className="mt-6">
-                            <h4 className="text-2xl font-semibold text-[#071952] mb-2">Puntos de Interés:</h4>
+                            <h4 className="text-2xl font-semibold text-[#071952] dark:text-[#36C2CE] mb-2">Puntos de Interés:</h4>
                             <ul className="list-disc pl-6 space-y-2">
                                 {city.puntosDeInteres.map((punto, index) => (
-                                    <li key={index} className="text-lg text-[#088395]">
+                                    <li key={index} className="text-lg text-[#088395] dark:text-[#b6f4ff]">
                                         {punto}
                                     </li>
                                 ))}
