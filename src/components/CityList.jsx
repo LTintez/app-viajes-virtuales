@@ -1,5 +1,4 @@
 import './CityList.css';
-import './SearchBar.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import CityItem from './CityItem';
@@ -7,7 +6,6 @@ import CityItem from './CityItem';
 const CityList = ({ filteredCities }) => {
   return (
     <section className='mb-10'>
-      <h2 className="main-title">Destinos</h2>
       <div className="card-container">
         {filteredCities.length > 0 ? (
           filteredCities.map((city) => (

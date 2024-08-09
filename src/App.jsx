@@ -1,10 +1,14 @@
 // src/App.js
 import React from 'react';
 import AppRoutes from './AppRoutes';
-import './App.css';
+import { DarkModeProvider } from './contexts/DarkModeContext';
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <DarkModeProvider>
+        <AppRoutes />;
+    </DarkModeProvider>
+);
 }
 
 export default App;

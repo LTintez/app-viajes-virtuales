@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HeroComponent.css';  
 
 const HeroComponent = () => {
   return (
@@ -11,7 +10,7 @@ const HeroComponent = () => {
       </video>
       <div className="relative z-10 flex flex-col justify-center items-start h-full px-6 md:px-12 lg:px-24 text-[#EBF4F6]">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-3 text-[#36C2CE]">
-          TripTastic{/* Definir nombre para la pagina */}
+          TripTastic
         </h1>
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
           Descubre los mejores <br /> destinos para tus vacaciones

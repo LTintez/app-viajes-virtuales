@@ -12,10 +12,6 @@
         -0.7px 40.2px 60.3px hsl(var(--shadow-color) / 0.44), -1px 51.6px 77.4px hsl(var(--shadow-color) / 0.5);
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
 .card-section {
     background-color: #088395;
     width: 250px;
@@ -35,7 +31,7 @@ body {
 .card-title {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.5rem; /* Incrementar tamaño de fuente */
+    font-size: 1.5rem;
     color: #EBF4F6;
     margin-bottom: 0.5rem;
 }
@@ -49,7 +45,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    margin-bottom: 1rem; /* Añadir espacio entre la imagen y el texto */
+    margin-bottom: 1rem;
 }
 
 .ver-mas-btn {
