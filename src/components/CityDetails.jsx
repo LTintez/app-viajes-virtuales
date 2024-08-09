@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import citiesData from '../data/cities.json';
 import { FaArrowLeft } from 'react-icons/fa';
+import CommentList from './CommentList';
 
 const CityDetails = () => {
     const { id } = useParams();
@@ -24,6 +25,7 @@ const CityDetails = () => {
                     <img src={city.imagen} alt={city.titulo} className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto lg:max-w-full lg:mx-0" />
                 </div>
             </div>
+            <CommentList />
             <button
                 onClick={() => navigate('/destinations')}
                 className="self-start mt-4 p-2 flex items-center gap-2 bg-blue-600 text-white rounded hover:bg-blue-700"
