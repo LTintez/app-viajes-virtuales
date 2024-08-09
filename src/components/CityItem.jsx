@@ -9,6 +9,7 @@ const CityItem = ({ titulo, descripcion, imagen }) => {
             <picture>
                 <img className="card-img" src={imagen} alt={titulo} />
             </picture>
+            <button className="ver-mas-btn">Ver más</button>
         </section>
     )
 }

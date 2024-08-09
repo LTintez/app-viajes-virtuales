@@ -6,7 +6,7 @@ import CityItem from './CityItem';
 
 const CityList = ({ filteredCities }) => {
   return (
-    <article>
+    <section className='mb-10'>
       <h2 className="main-title">Destinos</h2>
       <div className="card-container">
         {filteredCities.length > 0 ? (
@@ -17,7 +17,7 @@ const CityList = ({ filteredCities }) => {
           <p className="no-results">No se encontraron resultados.</p>
         )}
       </div>
-    </article>
+    </section>
   );
 };
 
