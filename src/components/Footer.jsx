@@ -40,7 +40,7 @@ const items = [
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-24 bg-[#071952] text-[#EBF4F6] py-8 px-4">
+    <footer className="w-full bg-[#071952] text-[#EBF4F6] py-8 px-4">
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-12 gap-8 border-b-2 border-[#088395] py-8">
         {sections.map((section, index) => (
           <div key={index} className="col-span-1 md:col-span-3">

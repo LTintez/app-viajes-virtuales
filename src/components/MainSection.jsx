@@ -3,7 +3,7 @@ import './MainSection.css';
 
 const MainSection = () => {
     return (
-        <section className="py-16">
+        <section className="flex items-center justify-center h-screen w-full py-16">
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 ml-7 md:mb-0">
                     <h1 className="text-4xl md:text-5xl font-bold text-[#071952] mb-4">
