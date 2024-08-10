@@ -23,7 +23,7 @@ const About = () => {
   ]);
 
   return (
-    <body className='bg-gradient-to-r from-[#EBF4F6] to-[#37B7C3] dark:from-[#1d5963] dark:to-[#2d3748]'>
+    <body className='bg-gradient-to-r from-[#EBF4F6] to-[#37B7C3] dark:from-[#1d5963] dark:to-[#2d3748] mb-0'>
       <div className="about-page">
         <h1 className="text-4xl md:text-5xl font-bold text-[#071952] mb-4 dark:text-[#36C2CE]">Acerca de TripTastic</h1>
         <div className="app-info">
